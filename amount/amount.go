@@ -16,9 +16,10 @@ func inValidjcbFieldAmount(field string) bool {
 	return regexpJcbAmount.MatchString(field)
 }
 
-//amount string accept decimal .0 only and cut decimal Only take an integer
-//if Decimal more than 0 wil Reject
-//if amount has comma(,) must be accurate according to the amount of money
+// amount string accept decimal .0 only and cut decimal Only take an integer
+// if Decimal more than 0 wil Reject
+// if amount has comma(,) must be accurate according to the amount of money
+// if amount prefix is (-) wil reject
 func ParseReqAmountWithoutDecimal(str string) (int, error) {
 
 	//==========================//
