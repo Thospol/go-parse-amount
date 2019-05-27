@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	amount, err := amount.ParseReqAmount(",00.00")
+	amount, err := amount.ParseReqAmountWithoutDecimal("123,456.00")
 	if err != nil {
 		fmt.Println("parseReqAmount error: ", err)
 	}
